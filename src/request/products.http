@@ -1,0 +1,38 @@
+// Esta es la extencion dentro de code para ver los metodos sin tener que irse al navegador y dar F5 
+
+// para ejecutar los metodos => btn Derecho y Send Request
+
+// creamos una variable... con @ se crea una variable...
+@api = http://localhost:3000/products
+
+//  GET {{api}} ... es igual a esto GET ... http://localhost:3000/products 
+/// GET todos los Productos.
+GET {{api}}
+
+// Separamos con 3 numerales para especificar que es otra peticion.
+###   POST de un Producto
+POST {{api}}
+Content-Type: application/json
+{
+    "nombre" : "microphone",
+    "descripcion" : "microphone SAMNG gamming",
+    "cantidad" : 8
+}
+
+###  GET Producto por Id.
+GET {{api}}/8
+
+###  DELETE Producto por Id.
+DELETE {{api}}/8
+
+### GET Cantidad Total de Productos.
+GET {{api}}/count
+
+### PUT Producto por su Id
+PUT {{api}}/3
+Content-Type: application/json
+{
+    "nombre" : "micropene",
+    "descripcion" : "Los SAMSUNG gamming PRO.",
+    "cantidad" : 2
+}
